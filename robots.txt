@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://allyonoapplink.github.io/sitemap.xml
+Sitemap: https://yonogames.shop/sitemap.xml
