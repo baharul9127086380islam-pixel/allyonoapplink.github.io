@@ -40,33 +40,48 @@ a{text-decoration:none}
 .card h3{margin:0;color:#00f0ff}
 .card p{margin:4px 0;color:#9fb0c9;font-size:14px}
 
-/* ===== 3D HD DOWNLOAD BUTTON ===== */
+/* ===== 4 COLOR HD ANIMATED BUTTON ===== */
 .btn{
 margin-left:auto;
-padding:12px 22px;
-border-radius:14px;
+padding:12px 24px;
+border-radius:16px;
 font-weight:900;
-color:#012b10;
-background:linear-gradient(180deg,#3cff7a,#1aa84f);
+color:#041013;
+background:linear-gradient(
+270deg,
+#00ffcc,
+#3cff7a,
+#2b8cff,
+#ffd24a
+);
+background-size:600% 600%;
+animation:gradientMove 4s ease infinite, pulse 1.8s infinite;
 box-shadow:
 0 6px 0 #0e7a3a,
-0 12px 25px rgba(0,0,0,0.6);
-transition:all .2s ease;
-display:inline-block
+0 14px 30px rgba(0,0,0,0.7);
+display:inline-block;
+transition:transform .2s ease;
 }
 .btn:hover{
-transform:translateY(-2px);
-box-shadow:
-0 8px 0 #0e7a3a,
-0 18px 35px rgba(0,0,0,0.8)
+transform:translateY(-2px) scale(1.02);
 }
 .btn:active{
-transform:translateY(4px);
+transform:translateY(3px);
 box-shadow:
-0 2px 0 #0e7a3a,
-0 6px 15px rgba(0,0,0,0.6)
+0 3px 0 #0e7a3a,
+0 8px 18px rgba(0,0,0,0.6);
 }
-/* =============================== */
+
+@keyframes gradientMove{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+@keyframes pulse{
+0%,100%{box-shadow:0 0 0 rgba(0,0,0,0)}
+50%{box-shadow:0 0 25px rgba(0,255,204,0.6)}
+}
+/* ==================================== */
 
 .warning{margin-top:24px;background:#c70000;color:#fff;padding:14px;border-radius:12px;font-weight:700}
 .footer{margin-top:30px;text-align:center;font-size:13px;color:#9fb0c9}
